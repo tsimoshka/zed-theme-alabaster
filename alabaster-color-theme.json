@@ -118,7 +118,7 @@
         "info": null,
         "info.background": null,
         "info.border": null,
-        "modified": null,
+        "modified": "#325CC0",
         "modified.background": null,
         "modified.border": null,
         "predictive": null,
@@ -136,7 +136,11 @@
         "warning": null,
         "warning.background": null,
         "warning.border": null,
-        "players": [],
+        "players": [
+          {
+            "selection": "#BFDBFE"
+          }
+        ],
         "syntax": {
           "comment": {
             "color": "#AA3731",
