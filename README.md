@@ -10,6 +10,10 @@ Currently, this is basically a theme generated with [theme-importer](https://git
 
 ## Installation
 
+### Installing from the Zed Extension repository
+
+Open the command palette with `Cmd+Shift+P` and run `zed: extensions`. Search for `Alabaster` and install it. Pick the theme in the theme selector with `Cmd+Shift+P` > `theme selector: toggle` > Alabaster.
+
 ### Installing from the repo
 
 Downlad the `themes/alabaster-color-theme.json` and place it in your `~/.config/zed/themes` directory. Restart zed editor and select the theme in theme selector.
