@@ -157,6 +157,21 @@
             "font_style": null,
             "font_weight": null
           },
+          "function": {
+            "color": "#325CC0",
+            "font_style": null,
+            "font_weight": null
+          },
+          "function.method": {
+            "color": "#000000",
+            "font_style": null,
+            "font_weight": null
+          },
+          "function.builtin": {
+            "color": "#000000",
+            "font_style": null,
+            "font_weight": null
+          },
           "constant": {
             "color": "#7A3E9D",
             "font_style": null,
