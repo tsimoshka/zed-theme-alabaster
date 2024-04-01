@@ -103,7 +103,7 @@
         "deleted": null,
         "deleted.background": null,
         "deleted.border": null,
-        "error": null,
+        "error": "#AA3731",
         "error.background": null,
         "error.border": null,
         "hidden": null,
@@ -133,7 +133,7 @@
         "unreachable": null,
         "unreachable.background": null,
         "unreachable.border": null,
-        "warning": null,
+        "warning": "#CB9000",
         "warning.background": null,
         "warning.border": null,
         "players": [

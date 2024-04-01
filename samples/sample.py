@@ -22,6 +22,9 @@ def decorator_name(arg1: str, arg2: str) -> Callable[[Any], Any]:
         return wrapper
     return real_decorator
 
+# warning
+print
+
 # class definition
 class SampleClass:
     """
