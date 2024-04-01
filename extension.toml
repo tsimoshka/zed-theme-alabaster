@@ -1,6 +1,6 @@
 id = "alabaster"
 name = "Alabaster"
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
 authors = ["Vitali Tsimoshka <tck@tck9f.com>"]
 description = "Alabaster color scheme (port of https://github.com/tonsky/sublime-scheme-alabaster)"
