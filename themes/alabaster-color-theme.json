@@ -402,17 +402,17 @@
             "font_weight": null
           },
           "string.doc": {
-            "background_color": "#F1FADF",
+            "background_color": "#FFFABC",
             "font_style": null,
             "font_weight": null
           },
           "function": {
-            "color": "#325CC0",
+            "background_color": "#DBF1FF",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#000000",
+            "background_color": "#DBF1FF",
             "font_style": null,
             "font_weight": null
           },
@@ -427,7 +427,7 @@
             "font_weight": null
           },
           "label": {
-            "color": "#325CC0",
+            "background_color": "#DBF1FF",
             "font_style": null,
             "font_weight": null
           },
@@ -497,7 +497,7 @@
             "font_weight": null
           },
           "title": {
-            "color": "#325CC0",
+            "background_color": "#DBF1FF",
             "font_style": null,
             "font_weight": null
           }
