@@ -1,0 +1,113 @@
+# YAML sample for Alabaster theme
+# Comments in YAML should be highlighted
+
+# String values
+name: "Alabaster Theme Test"
+description: 'A minimal highlighting theme'
+author: John Doe
+
+# Numeric constants
+version: 1.0
+port: 3000
+timeout: 30.5
+priority: 100
+
+# Boolean constants
+enabled: true
+debug: false
+production: yes
+development: no
+
+# Null values
+empty: null
+nothing: ~
+
+# Multiline strings
+message: |
+  This is a literal block scalar
+  It preserves newlines
+  And indentation
+  
+folded: >
+  This is a folded block scalar
+  It folds newlines into spaces
+  Unless there's a blank line
+
+# Lists
+features:
+  - authentication
+  - "api endpoints"
+  - 'user management'
+  - logging
+
+# Numbers in lists
+fibonacci: [1, 1, 2, 3, 5, 8, 13]
+
+# Nested structures
+database:
+  # Nested comments
+  host: localhost
+  port: 5432
+  credentials:
+    username: "admin"
+    password: "secret123"
+  options:
+    ssl: true
+    timeout: 30
+
+# Anchors and aliases
+defaults: &defaults
+  adapter: postgres
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *defaults
+  database: myapp_dev
+  
+production:
+  <<: *defaults
+  database: myapp_prod
+  pool: 25
+
+# Different key formats
+"quoted key": value
+'single quoted': another value
+unquoted_key: third value
+key-with-dashes: fourth value
+
+# Special strings that might be interpreted as other types
+special_strings:
+  - "true"
+  - "false"
+  - "123"
+  - "3.14"
+  - "null"
+  - "~"
+  - "yes"
+  - "no"
+  - "on"
+  - "off"
+
+# Dates and timestamps (often parsed as special types)
+created_at: 2024-01-15
+updated_at: 2024-01-15T10:30:00Z
+expires: 2024-12-31 23:59:59
+
+# Flow style
+inline_list: [red, green, blue]
+inline_dict: {name: test, count: 42, active: true}
+
+# Complex nested example
+services:
+  web:
+    image: "nginx:latest"
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      NODE_ENV: production
+      DEBUG: "false"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    restart: always

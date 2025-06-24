@@ -1,0 +1,115 @@
+# TOML sample for Alabaster theme
+# Comments should be highlighted in TOML
+
+# Top-level strings
+title = "Alabaster Theme Test"
+description = 'A minimal highlighting theme'
+author = "John Doe"
+
+# Numeric constants
+version = 1.0
+port = 3000
+timeout = 30.5
+max_connections = 100
+
+# Boolean constants
+enabled = true
+debug = false
+
+# Dates and times
+release_date = 2024-01-15
+updated_at = 2024-01-15T10:30:00Z
+expires_at = 2024-12-31T23:59:59-05:00
+
+# Basic strings
+[strings]
+basic = "I'm a string with \"quotes\""
+multiline_basic = """
+This is a
+multiline
+string"""
+
+# Literal strings
+literal = 'C:\Users\name\Documents'
+multiline_literal = '''
+First line
+Second line
+Third line'''
+
+# Arrays
+[arrays]
+integers = [1, 2, 3, 4, 5]
+floats = [1.1, 2.2, 3.3]
+booleans = [true, false, true]
+strings = ["red", "green", "blue"]
+mixed = [1, "two", 3.0, true]
+
+# Nested arrays
+matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+# Inline tables
+[inline]
+point = { x = 1, y = 2, z = 3 }
+color = { r = 255, g = 128, b = 0, name = "orange" }
+
+# Tables
+[database]
+server = "192.168.1.1"
+port = 5432
+connection_max = 100
+enabled = true
+
+# Nested tables
+[database.credentials]
+username = "admin"
+password = "secret123"
+
+[database.options]
+timeout = 30
+retry_count = 3
+use_ssl = true
+
+# Array of tables
+[[servers]]
+name = "alpha"
+ip = "10.0.0.1"
+role = "frontend"
+
+[[servers]]
+name = "beta"
+ip = "10.0.0.2"
+role = "backend"
+
+[[servers]]
+name = "gamma"
+ip = "10.0.0.3"
+role = "database"
+
+# Dotted keys
+[environment]
+development.debug = true
+development.port = 3000
+production.debug = false
+production.port = 80
+
+# Special float values
+[special_floats]
+infinity = inf
+negative_infinity = -inf
+not_a_number = nan
+
+# Hex, octal, and binary literals
+[number_formats]
+hex = 0xDEADBEEF
+octal = 0o755
+binary = 0b11010110
+
+# Underscores in numbers
+[readable_numbers]
+thousand = 1_000
+million = 1_000_000
+decimal = 3.141_592_653_589

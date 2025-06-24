@@ -1,117 +1,163 @@
-# imports
-import math
-import re
-from datetime import datetime
-from typing import Any, Callable, Dict, List
+# This is a comment that explains the purpose of this module
+# According to Alabaster, comments should be highlighted
 
-# constants
-PI: float = 3.1416
+from typing import Optional, List, Dict, Union, Tuple, Any, Protocol
+from abc import ABC, abstractmethod
 
-# Regular expressions with escape symbols
-pattern: str = r"\d+"  # Matches all decimal digits
+# Global constant definitions with type annotations
+MAX_SIZE: int = 1000
+PI: float = 3.14159
+DEBUG: bool = True
+NONE_VALUE: None = None
+DEFAULT_NAME: str = "Unnamed"
 
-# decorator with arguments
-def decorator_name(arg1: str, arg2: str) -> Callable[[Any], Any]:
-    """
-    This is a decorator function with arguments
-    """
-    def real_decorator(function: Callable[[Any], Any]) -> Callable[[Any], Any]:
-        def wrapper(*args: Any, **kwargs: Any) -> None:
-            print(f"Decorated with \"{arg1}\", {arg2}")
-            function(*args, **kwargs)
-        return wrapper
-    return real_decorator
+# Protocol definition (structural subtyping)
+class Drawable(Protocol):
+    """Protocol for drawable objects."""
+    def draw(self) -> str: ...
 
-# warning
-print
+# Abstract base class
+class Shape(ABC):
+    """Abstract base class for all shapes."""
+    
+    def __init__(self, name: str) -> None:
+        self.name: str = name
+    
+    @abstractmethod
+    def area(self) -> float:
+        """Calculate the area of the shape."""
+        pass
+    
+    @abstractmethod
+    def perimeter(self) -> float:
+        """Calculate the perimeter of the shape."""
+        pass
 
-# class definition
-class SampleClass:
-    """
-    This is a simple sample class
-    """
-    class_variable: str = "I'm a class var"
+# Global function definition with type annotations
+def calculate_area(radius: float) -> float:
+    """Calculate the area of a circle."""
+    # Comments inside functions should also be highlighted
+    if radius <= 0:
+        return 0.0
+    
+    area: float = PI * radius ** 2
+    return area
 
-    def __init__(self, instance_var: str) -> None:
-        self.instance_var = instance_var # instance variable
+# Class with inheritance and type annotations
+class Circle(Shape):
+    """A Circle class that inherits from Shape."""
+    
+    def __init__(self, radius: float, name: str = "Circle") -> None:
+        # Call parent constructor
+        super().__init__(name)
+        # Instance attributes with type annotations
+        self.radius: float = radius
+        self.diameter: float = radius * 2.0
+    
+    def area(self) -> float:
+        """Calculate circle area."""
+        return PI * self.radius ** 2
+    
+    def perimeter(self) -> float:
+        """Calculate circle perimeter (circumference)."""
+        return 2 * PI * self.radius
+    
+    def get_info(self) -> Dict[str, Union[str, float]]:
+        # String literals should be highlighted
+        print("Getting circle information...")
+        return {
+            "name": self.name,
+            "radius": self.radius,
+            "area": self.area(),
+            "perimeter": self.perimeter()
+        }
 
-    # instance method with keyword arguments
-    def instance_method(self, a: int, b: int) -> int:
-        """
-        This is an instance method with a, b as arguments
-        """
-        return a + b
+# Another derived class
+class Rectangle(Shape):
+    """A Rectangle class that inherits from Shape."""
+    
+    def __init__(self, width: float, height: float, name: str = "Rectangle") -> None:
+        super().__init__(name)
+        self.width: float = width
+        self.height: float = height
+    
+    def area(self) -> float:
+        """Calculate rectangle area."""
+        return self.width * self.height
+    
+    def perimeter(self) -> float:
+        """Calculate rectangle perimeter."""
+        return 2 * (self.width + self.height)
 
-    @classmethod
-    def class_method(cls) -> str:
-        """
-        This is a class method
-        """
-        return cls.class_variable
+# Generic function with type variables
+def get_shapes_info(shapes: List[Shape]) -> List[Dict[str, Any]]:
+    """Get information about multiple shapes."""
+    result: List[Dict[str, Any]] = []
+    for shape in shapes:
+        info: Dict[str, Any] = {
+            "type": type(shape).__name__,
+            "name": shape.name,
+            "area": shape.area(),
+            "perimeter": shape.perimeter()
+        }
+        result.append(info)
+    return result
 
-# function definition
-def sample_func() -> None:
-    """
-    This is a sample function
-    """
-    # control structures, exception handling and loop
-    for i in range(10):
-        try:
-            if i == 5:
-                raise ValueError("It's 5")
-            else:
-                print(f"Number is {i}")
-        except ValueError as e:
-            print(e)
+# Function with optional and default parameters
+def create_shape(shape_type: str, 
+                dimensions: Tuple[float, ...],
+                name: Optional[str] = None) -> Optional[Shape]:
+    """Factory function to create shapes."""
+    if shape_type == "circle" and len(dimensions) == 1:
+        return Circle(dimensions[0], name or "Circle")
+    elif shape_type == "rectangle" and len(dimensions) == 2:
+        return Rectangle(dimensions[0], dimensions[1], name or "Rectangle")
+    return None
 
-# async function definition
-async def sample_async_func() -> None:
-    """
-    This is an asynchronous function
-    """
-    # asynchronous functionality
-    pass
-
-# decorators with arguments
-@decorator_name(arg1='arg1_val', arg2='arg2_val')
-def decorated_func() -> None:
-    """
-    This is a decorated function
-    """
-    pass
-
-# multi-line strings
-multiline_str: str = """
-This is a
-multiline string
-"""
-
-# Escaping symbols in strings
-escaped_str: str = "Hello\\nWorld"
-
-# dict comprehensions
-x: Dict[int, int] = {i: i ** 2 for i in range(10)}
-
-# a sample one liner list comprehension
-y: List[int] = [i ** 2 for i in range(10) if i % 2 == 0]
-
-# lambda function
-z: Callable[[int], int] = lambda x: x * x
-
-# a sample usage of imported function
-print(math.sqrt(PI))
-
-# Regular expression match
-re_match = re.search(pattern, "123abc456")
-print(f"Match found: {re_match.group()}")
-
-# calling a class method
-print(SampleClass.class_method())
-
-# calling a method with keyword argument
-sample: SampleClass = SampleClass('instance_var_val')
-print(sample.instance_method(a=5, b=10))
-
-# the dunder-name variable
+# Using the defined elements
 if __name__ == "__main__":
-    sample_func()
+    # Various string types with annotations
+    single_quoted: str = 'Hello, World!'
+    double_quoted: str = "Python sample for Alabaster theme"
+    multiline: str = """This is a
+    multiline string
+    for testing"""
+    
+    # Numbers and boolean constants with annotations
+    integer_num: int = 42
+    float_num: float = 3.14
+    hex_num: int = 0xFF
+    binary_num: int = 0b1010
+    is_valid: bool = True
+    is_empty: bool = False
+    
+    # Complex type annotations
+    numbers: List[int] = [1, 2, 3, 4, 5]
+    mapping: Dict[str, float] = {"pi": 3.14, "e": 2.718}
+    mixed: Tuple[int, str, bool] = (42, "answer", True)
+    
+    # Creating objects with type annotations
+    shapes: List[Shape] = [
+        Circle(5.0, "Small Circle"),
+        Rectangle(10.0, 20.0, "Large Rectangle"),
+        Circle(15.0, "Big Circle")
+    ]
+    
+    # Using polymorphism
+    for shape in shapes:
+        area: float = shape.area()
+        perimeter: float = shape.perimeter()
+        print(f"{shape.name}: area={area}, perimeter={perimeter}")
+    
+    # Optional types
+    maybe_shape: Optional[Shape] = create_shape("circle", (10.0,))
+    nothing: Optional[Shape] = None
+    
+    # Union types
+    value: Union[int, str] = 42
+    value = "forty-two"
+    
+    # Any type
+    anything: Any = 123
+    anything = "string"
+    anything = [1, 2, 3]

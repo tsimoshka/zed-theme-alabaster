@@ -1,0 +1,188 @@
+/* CSS sample for Alabaster theme */
+/* Comments should be highlighted */
+
+/* Global custom properties (CSS variables) */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size: 16px;
+  --spacing: 1rem;
+  --max-width: 1200px;
+  --transition-speed: 300ms;
+}
+
+/* Element selectors */
+body {
+  /* String values */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  content: 'Single quoted string';
+  
+  /* Numeric values */
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* Class and ID selectors */
+.container {
+  /* Color values - various formats */
+  color: #333333;
+  background-color: rgb(255, 255, 255);
+  border-color: rgba(0, 0, 0, 0.1);
+  outline-color: hsl(210, 50%, 50%);
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+  
+  /* Numeric values with units */
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 1.5em;
+}
+
+#header {
+  /* Keyword values */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  
+  /* Multiple values */
+  margin: 10px 20px 30px 40px;
+  padding: 1rem 2rem;
+  transition: all 300ms ease-in-out;
+}
+
+/* Pseudo-classes and pseudo-elements */
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Pseudo-elements with content */
+.quote::before {
+  content: """;
+  font-size: 2em;
+}
+
+.quote::after {
+  content: """;
+  font-size: 2em;
+}
+
+/* Attribute selectors */
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+[data-theme="dark"] {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    font-size: 14px;
+  }
+}
+
+@media print {
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+/* Keyframes animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Complex selectors */
+nav ul li a:not(.active):hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card:nth-child(2n + 1) {
+  background-color: #f8f9fa;
+}
+
+/* CSS Grid and Flexbox */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Custom properties usage */
+.theme-component {
+  color: var(--primary-color);
+  padding: var(--spacing);
+  max-width: var(--max-width);
+  transition: color var(--transition-speed) ease;
+}
+
+/* URL values */
+.background-image {
+  background-image: url("../images/background.jpg");
+  background-image: url('data:image/png;base64,iVBORw0KGgo...');
+}
+
+/* Calc function */
+.calculated {
+  width: calc(100% - 40px);
+  height: calc(100vh - 80px);
+  font-size: calc(1rem + 0.5vw);
+}
+
+/* Modern CSS features */
+.modern {
+  /* Logical properties */
+  margin-inline: auto;
+  padding-block: 2rem;
+  
+  /* Aspect ratio */
+  aspect-ratio: 16 / 9;
+  
+  /* Clamp function */
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  
+  /* CSS filters */
+  filter: blur(2px) brightness(1.2);
+}

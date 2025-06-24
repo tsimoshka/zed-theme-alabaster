@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- HTML sample for Alabaster theme -->
+<!-- Comments should be highlighted -->
+<html lang="en" data-theme="light">
+<head>
+    <!-- Meta information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alabaster theme test page">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Alabaster Theme Test</title>
+    
+    <!-- Link elements with various attributes -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Inline styles to show CSS highlighting -->
+    <style>
+        /* CSS inside HTML */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 4px;
+        }
+    </style>
+    
+    <!-- Inline JavaScript to show JS highlighting -->
+    <script>
+        // JavaScript inside HTML
+        const APP_NAME = "Alabaster Test";
+        const VERSION = "1.0.0";
+        
+        function init() {
+            console.log("Initializing " + APP_NAME);
+            return true;
+        }
+    </script>
+</head>
+<body class="main-body" id="top">
+    <!-- Header section -->
+    <header class="site-header" role="banner">
+        <h1 class="title">Alabaster Theme HTML Sample</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home" title="Go to home">Home</a></li>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#contact" target="_blank" rel="noopener">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="content" role="main">
+        <!-- Article with various HTML5 elements -->
+        <article class="post" data-id="123" data-author="John Doe">
+            <h2>HTML Elements Showcase</h2>
+            
+            <!-- Text formatting -->
+            <p>This is a <strong>bold text</strong> and this is <em>italic text</em>.</p>
+            <p>Here's some <code>inline code</code> and a <mark>highlighted text</mark>.</p>
+            <p>This is <small>small text</small> and <del>deleted text</del> and <ins>inserted text</ins>.</p>
+            
+            <!-- Quotations -->
+            <blockquote cite="https://example.com">
+                "This is a block quote with a citation."
+                <cite>— Author Name</cite>
+            </blockquote>
+            
+            <p>Einstein said <q>E = mc²</q> in his famous equation.</p>
+            
+            <!-- Lists -->
+            <ul class="feature-list">
+                <li>Unordered list item 1</li>
+                <li>Unordered list item 2</li>
+                <li>Unordered list item 3</li>
+            </ul>
+            
+            <ol type="1" start="1">
+                <li value="1">Ordered list item</li>
+                <li>Another ordered item</li>
+                <li>Third ordered item</li>
+            </ol>
+            
+            <!-- Definition list -->
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+            </dl>
+            
+            <!-- Pre-formatted text -->
+            <pre>
+                This is pre-formatted text.
+                    It preserves spacing
+                        and line breaks.
+            </pre>
+            
+            <!-- Code block -->
+            <pre><code class="language-python">
+def hello_world():
+    """A simple function"""
+    print("Hello, World!")
+    return True
+            </code></pre>
+        </article>
+        
+        <!-- Forms section -->
+        <section id="forms" aria-labelledby="form-title">
+            <h2 id="form-title">Form Elements</h2>
+            
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <!-- Text inputs -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter username">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="user@example.com">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8">
+                
+                <!-- Other input types -->
+                <input type="number" min="0" max="100" step="5" value="50">
+                <input type="range" min="0" max="10" value="5">
+                <input type="date" value="2024-01-15">
+                <input type="color" value="#007bff">
+                
+                <!-- Checkboxes and radios -->
+                <input type="checkbox" id="agree" name="agree" checked>
+                <label for="agree">I agree to terms</label>
+                
+                <input type="radio" id="option1" name="options" value="1" checked>
+                <label for="option1">Option 1</label>
+                
+                <!-- Select dropdown -->
+                <select name="country" id="country">
+                    <option value="">Choose a country</option>
+                    <option value="us" selected>United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+                
+                <!-- Textarea -->
+                <textarea name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+                
+                <!-- Buttons -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="alert('Clicked!')">Click Me</button>
+            </form>
+        </section>
+        
+        <!-- Media elements -->
+        <section class="media">
+            <h2>Media Elements</h2>
+            
+            <img src="image.jpg" alt="Sample image" width="300" height="200" loading="lazy">
+            
+            <picture>
+                <source srcset="image-large.jpg" media="(min-width: 800px)">
+                <source srcset="image-medium.jpg" media="(min-width: 400px)">
+                <img src="image-small.jpg" alt="Responsive image">
+            </picture>
+            
+            <video controls width="320" height="240" poster="poster.jpg">
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                Your browser doesn't support video.
+            </video>
+            
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+                Your browser doesn't support audio.
+            </audio>
+            
+            <iframe src="https://example.com" width="600" height="400" title="Example iframe"></iframe>
+        </section>
+        
+        <!-- Tables -->
+        <table class="data-table" border="1">
+            <caption>Sample Data Table</caption>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Item One</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Item Two</td>
+                    <td>200</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>300</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <!-- Modern HTML5 elements -->
+        <details open>
+            <summary>Click to expand/collapse</summary>
+            <p>This content is inside a details element.</p>
+        </details>
+        
+        <dialog id="dialog">
+            <p>This is a dialog box</p>
+            <button onclick="document.getElementById('dialog').close()">Close</button>
+        </dialog>
+        
+        <progress value="70" max="100">70%</progress>
+        <meter value="6" min="0" max="10">6 out of 10</meter>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Alabaster Theme Test. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:test@example.com">test@example.com</a>
+        </address>
+    </footer>
+    
+    <!-- External scripts -->
+    <script src="app.js" defer></script>
+    <script async src="https://example.com/analytics.js"></script>
+    
+    <!-- Inline script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            init();
+        });
+    </script>
+</body>
+</html>

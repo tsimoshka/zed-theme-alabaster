@@ -1,0 +1,96 @@
+{
+  "name": "Alabaster Theme Test",
+  "description": "A minimal highlighting theme for code editors",
+  "version": "1.0.0",
+  "author": "John Doe",
+  
+  "strings": {
+    "simple": "Hello, World!",
+    "with_quotes": "She said \"Hello\" to me",
+    "with_escapes": "Line 1\nLine 2\tTabbed",
+    "unicode": "Hello \u0041\u0042\u0043",
+    "empty": ""
+  },
+  
+  "numbers": {
+    "integer": 42,
+    "negative": -17,
+    "float": 3.14159,
+    "scientific": 1.5e10,
+    "negative_scientific": -2.5e-4,
+    "zero": 0
+  },
+  
+  "booleans": {
+    "is_true": true,
+    "is_false": false
+  },
+  
+  "null_value": null,
+  
+  "arrays": {
+    "empty": [],
+    "numbers": [1, 2, 3, 4, 5],
+    "strings": ["red", "green", "blue"],
+    "mixed": [42, "hello", true, null, 3.14],
+    "nested": [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ]
+  },
+  
+  "nested_objects": {
+    "user": {
+      "id": 12345,
+      "username": "johndoe",
+      "email": "john@example.com",
+      "is_active": true,
+      "metadata": {
+        "created_at": "2024-01-15T10:30:00Z",
+        "last_login": "2024-01-20T15:45:00Z",
+        "login_count": 42
+      }
+    }
+  },
+  
+  "configuration": {
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "name": "myapp_db",
+      "credentials": {
+        "username": "admin",
+        "password": "secret123"
+      },
+      "options": {
+        "ssl": true,
+        "timeout": 30,
+        "max_connections": 100
+      }
+    },
+    
+    "features": {
+      "authentication": true,
+      "api_enabled": true,
+      "debug_mode": false,
+      "maintenance": false
+    }
+  },
+  
+  "special_cases": {
+    "very_long_string": "This is a very long string that might wrap in some editors depending on the width of the viewing window and the settings of the editor",
+    "large_number": 9007199254740991,
+    "small_number": 0.000000000000001,
+    "nested_arrays_complex": [
+      {
+        "id": 1,
+        "values": [10, 20, 30]
+      },
+      {
+        "id": 2,
+        "values": [40, 50, 60]
+      }
+    ]
+  }
+}
