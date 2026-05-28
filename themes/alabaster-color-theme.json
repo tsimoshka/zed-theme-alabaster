@@ -867,7 +867,7 @@
         "editor.active_wrap_guide": "#454c54ff",
         "editor.document_highlight.read_background": "#023b954d",
         "editor.document_highlight.write_background": "#023b9533",
-        "terminal.background": "#eff2f5ff",
+        "terminal.background": "#ffffffff",
         "terminal.foreground": "#010409ff",
         "terminal.bright_foreground": "#ffffffff",
         "terminal.dim_foreground": "#454c54ff",
