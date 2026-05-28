@@ -20,6 +20,9 @@ Zed's bundled `highliting.scm` files at `https://github.com/zed-industries/zed/t
 
 ![Alabaster Mono](./assets/alabaster-mono.png)
 
+### Alabaster Mono High Contrast
+
+![Alabaster Mono High Contrast](./assets/alabaster-mono-high-contrast.png)
 
 ### Alabaster Dark
 
@@ -28,3 +31,7 @@ Zed's bundled `highliting.scm` files at `https://github.com/zed-industries/zed/t
 ### Alabaster Dark Mono
 
 ![Alabaster Dark Mono](./assets/alabaster-dark-mono.png)
+
+### Alabaster Dark Mono High Contrast
+
+![Alabaster Dark Mono High Contrast](./assets/alabaster-dark-mono-high-contrast.png)
