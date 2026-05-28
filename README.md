@@ -16,6 +16,10 @@ Zed's bundled `highliting.scm` files at `https://github.com/zed-industries/zed/t
 
 ![Alabaster BG](./assets/alabaster-bg.png)
 
+### Alabaster BG High Contrast
+
+![Alabaster BG High Contrast](./assets/alabaster-bg-high-contrast.png)
+
 ### Alabaster Mono
 
 ![Alabaster Mono](./assets/alabaster-mono.png)
