@@ -757,6 +757,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "property": {
+            "color": "#000000",
+            "font_style": null,
+            "font_weight": null
+          },
           "type.class.definition": {
             "color": "#000000",
             "background_color": "#eeeeee",
@@ -1022,6 +1027,11 @@
           "constant": {
             "color": "#000000",
             "background_color": "#eeeeee",
+            "font_style": null,
+            "font_weight": null
+          },
+          "property": {
+            "color": "#000000",
             "font_style": null,
             "font_weight": null
           },
@@ -1834,6 +1844,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "property": {
+            "color": "#000000",
+            "font_style": null,
+            "font_weight": null
+          },
           "type.class.definition": {
             "color": "#000000",
             "background_color": "#dbf1ff",
@@ -2098,6 +2113,11 @@
           },
           "constant": {
             "color": "#7a3e9d",
+            "font_style": null,
+            "font_weight": null
+          },
+          "property": {
+            "color": "#000000",
             "font_style": null,
             "font_weight": null
           },
